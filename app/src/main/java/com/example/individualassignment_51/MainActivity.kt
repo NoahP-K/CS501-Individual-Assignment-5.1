@@ -97,7 +97,7 @@ fun MakeScreen(pressure: Float){
     within the range of 0 to 255; the range a single r, g, or b value can have.
     I make r, g, and b all this value to keep a shade of gray.
     */
-    var colorPart = ((255.0/1013.0) * pressure).toInt()
+    var colorPart = ((255.0/1013.25) * pressure).toInt()
     colorPart = if(colorPart>255) 255 else colorPart    //If the pressure goes above atmospheric, keep the color white
     //animation to change the color with the pressure
     val animatedColor by animateColorAsState(
